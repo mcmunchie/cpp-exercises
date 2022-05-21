@@ -1,5 +1,6 @@
 // Driver File for Fruit.h in lab 6
 // Main Driver for Fruit.h in Lab 6
+// NOTE: only one main can be defined and ran at once (comment out lab5 to run lab6)
 
 #include "Fruit.h"
 #include <iostream>
