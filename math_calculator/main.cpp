@@ -79,34 +79,22 @@ int take_input() {
 }
 
 void addition(int data_array[], int data_size) {
-    int sum = 0;
-    for (int x = 0; x < data_size; x++) { // iterate through the array
-        sum += data_array[x]; // sum = sum + each, update the sum-total
-    }
+    int sum = data_array[0] + data_array[1];
     cout << "\n\t\tThe sum of "<< data_array[0] << " + " << data_array[1] << " = " << sum << endl;
 }
 
 void subtraction(int data_array[], int data_size) {
-    int diff = 0;
-    for (int x = 0; x < data_size; x++) {
-        diff = data_array[0] - data_array[1];
-    }
+    int diff = data_array[0] - data_array[1];
     cout << "\n\t\tThe difference of "<< data_array[0] << " - " << data_array[1] << " = " << diff << endl;
 }
 
 void multiply(int data_array[], int data_size) {
-    int product = 0;
-    for (int x = 0; x < data_size; x++) {
-        product = data_array[0] * data_array[1];
-    }
+    int product = data_array[0] * data_array[1];
     cout << "\n\t\tThe product of "<< data_array[0] << " * " << data_array[1] << " = " << product << endl;
 }
 
 void divide(int data_array[], int data_size) {
-    int quotient = 0;
-    for (int x = 0; x < data_size; x++) {
-        quotient = data_array[0] / data_array[1];
-    }
+    int quotient = data_array[0] / data_array[1];
     cout << "\n\t\tThe quotient of "<< data_array[0] << " / " << data_array[1] << " = " << quotient << endl;
 }
 
@@ -116,7 +104,6 @@ void average(int data_array[], int data_size) {
         sum += data_array[x]; 
     }
 
-    double average = 0.0;
-    average = sum / data_size;
+    double average = sum / data_size;
     cout << "\n\t\tThe average of the numbers entered is " << average << endl;
 }
