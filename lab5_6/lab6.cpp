@@ -29,7 +29,7 @@ bool CompCarb(Fruit & ca, Fruit & cb) {
     return ca.get_carbs_quantity() > cb.get_carbs_quantity(); }
 
 int main() {
-    std::cout << "Driver for Fruit.h files in lab5." << std::endl;
+    std::cout << "Driver for Fruit.h files in lab6." << std::endl;
 
     // Create three objects of Class type Fruit
     Fruit apple = Fruit("Apple, red delicious, with skin, raw", 100, 62, 14.8, .21, .21);
