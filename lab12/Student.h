@@ -64,4 +64,4 @@ private:
 
 };
 
-#endif // PERSON_STUDENT_H
+#endif //PERSON_STUDENT_H

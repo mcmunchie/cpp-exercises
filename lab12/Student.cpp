@@ -9,7 +9,7 @@ Student::Student(){
   set_student_id(establish_student_id_number());
   set_grade_point_average(establish_student_gpa());
   set_degree_pursued(establish_student_degree());
-  Student_Person = Person(establish_year(), establish_hometown(), establish_student_name());
+  Student_Person = Person(establish_year(), establish_hometown(), establish_name());
 }
 
 // Student constructor given a Person object
@@ -31,11 +31,11 @@ Student::Student(int the_year, std::string the_hometown, std::string the_name)
   }
 
 // Student constructor given data for a Student object, but no data for Person or Person object
-Student::Student(std::string as_name, int as_id, float as_gpa, std::string as_degree)
-  : preferred_name{as_name}, student_id{as_id},
-    grade_point_average{as_gpa}, degree_pursued{as_degree} 
+Student::Student(std::string a_name, int an_id, float start_gpa, std::string degree_type)
+  : preferred_name{a_name}, student_id{an_id},
+    grade_point_average{start_gpa}, degree_pursued{degree_type} 
     {
-      Student_Person = Person(establish_year(), establish_hometown(), establish_student_name());
+      Student_Person = Person(establish_year(), establish_hometown(), establish_name());
     }
 
 // Student constructor given data for a Student object and Person data (no Person object)
@@ -106,7 +106,7 @@ void Student::set_degree_pursued(std::string degree_type) {
 std::string Student::establish_student_name() {
   cout << "Please enter preferred name for student: " << endl;
   std::string name;
-  cin >> name;
+  std::getline(std::cin, name);
   return name;
 }
 
@@ -127,7 +127,7 @@ float Student::establish_student_gpa() {
 std::string Student::establish_student_degree() {
   cout << "Please enter degree being pursued: " << endl;
   std::string degree;
-  cin >> degree;
+  std::getline(std::cin, degree);
   return degree;
 }
 
@@ -141,13 +141,13 @@ int Student::establish_year() {
 std::string Student::establish_hometown() {
   cout << "Please enter student's hometown: " << endl;
   std::string hometown;
-  cin >> hometown;
+  std::getline(std::cin, hometown);
   return hometown;
 }
 
 std::string Student::establish_name() {
-  cout << "Please enter student's given name: " << endl;
+  cout << "Please enter given name: " << endl;
   std::string given_name;
-  cin >> given_name;
+  std::getline(std::cin, given_name);
   return given_name;
 }
